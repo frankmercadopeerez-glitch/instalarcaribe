@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metas SEO Optimizadas para Cartagena -->
+    <title>Ingeniería Eléctrica y Proyectos en Cartagena | Instalar Caribe</title>
+    <meta name="description" content="Líderes en ingeniería eléctrica, electromecánica, instrumentación, obras civiles y mantenimiento naval en Cartagena. Soluciones industriales y comerciales con Instalar Caribe.">
+    
+    <!-- Palabras Clave (Keywords) -->
+    <meta name="keywords" content="ingeniería eléctrica cartagena, ingeniería electromecánica cartagena, instrumentación industrial cartagena, obras civiles cartagena, mantenimiento naval cartagena, proyectos de ingeniería cartagena, Instalar Caribe">
+    
+    <!-- Open Graph (para redes sociales) -->
+    <meta property="og:title" content="Ingeniería Eléctrica y Proyectos en Cartagena | Instalar Caribe">
+    <meta property="og:description" content="Soluciones confiables de ingeniería industrial, comercial y naval en Cartagena de Indias.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.instalacaribesas.com/"> <!-- Asumiendo la URL final -->
+
+    <!-- Favicon (Emoji de Rayo ⚡) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Lexend (reemplazando Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Fuente base */
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; /* PREVIENE EL SCROLL HORIZONTAL MOLESTO */
+        }
+
+        /* Estilo para el botón flotante de WhatsApp (Nuevo diseño simple) */
+        .whatsapp-float-simple {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float-simple:hover {
+            transform: scale(1.1);
+        }
+        .whatsapp-float-simple img {
+            width: 60px;
+            height: 60px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); /* Sombra para el logo */
+        }
+        .whatsapp-float-simple span {
+            font-size: 14px;
+            font-weight: 700; /* bold */
+            color: #1F2937; /* text-gray-800 */
+            margin-top: 5px;
+            background: rgba(255,255,255,0.85); /* Fondo semi-transparente */
+            backdrop-filter: blur(4px);
+            padding: 3px 10px;
+            border-radius: 8px; /* rounded-lg */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        
+        /* Animaciones */
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-slide-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-slide-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0) translateX(0);
+        }
+        
+        /* Animación de pulso para el botón del Hero */
+        @keyframes pulse-slow {
+            0%, 100% {
+                transform: scale(1.05); /* Ligeramente más grande en reposo */
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            transform: scale(1.05); /* Estado inicial */
+        }
+        
+        /* Carrusel de Logos */
+        .logo-carousel-wrapper {
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .logo-carousel-track {
+            display: flex;
+            width: calc(200px * 10); /* 200px por logo, 5 logos * 2 = 10 */
+            /* CAMBIO: Duración reducida de 35s a 20s para mayor velocidad */
+            animation: scroll-logos-5 20s linear infinite; 
+        }
+
+        .logo-carousel-track:hover {
+            /* Eliminada la regla 'animation-play-state: paused;' */
+        }
+
+        .logo-slide {
+            flex-shrink: 0;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+            opacity: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-slide:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-slide img {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px; /* Altura máxima para uniformidad */
+        }
+
+        @keyframes scroll-logos-5 { /* Renombrada para 5 logos */
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-200px * 5)); /* Mover 5 logos */
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-white text-gray-700">
+
+    <!-- ========== Header ========== -->
+    <header id="header" class="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo / Título de la Empresa -->
+            <a href="#inicio" class="text-2xl font-bold text-blue-700 hover:text-blue-800 transition-colors">
+                Instalar Caribe
+            </a>
+            
+            <!-- Navegación Desktop -->
+            <div class="hidden md:flex space-x-6 items-baseline">
+                <a href="#inicio" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+                <a href="#empresa" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Empresa</a>
+                <a href="#servicios" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Servicios</a>
+                <a href="#proyectos" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Proyectos</a>
+                <!-- NUEVO ENLACE A TESTIMONIOS -->
+                <a href="#testimonios" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Testimonios</a>
+                <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl duration-300">
+                    Contáctanos
+                </a>
+            </div>
+            
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute top-full left-0 w-full z-40">
+            <a href="#inicio" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Inicio</a>
+            <a href="#empresa" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Empresa</a>
+            <a href="#servicios" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Servicios</a>
+            <a href="#proyectos" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Proyectos</a>
+            <!-- NUEVO ENLACE A TESTIMONIOS -->
+            <a href="#testimonios" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Testimonios</a>
+            <a href="#contacto" class="block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- ========== Hero Section ========== -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Fondo de Gradiente -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-700 to-blue-900"></div>
+        <!-- Efecto de partículas sutil (CSS) -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FFF 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <!-- ***** NUEVO: Logo de fondo ***** -->
+        <div class="absolute inset-0 z-5 flex items-center justify-center p-8 pointer-events-none">
+            <img src="images/Instalar-Caribe-Logo.webp" 
+                 alt="Logo Instalar Caribe" 
+                 class="w-full max-w-5xl opacity-30"
+                 onerror="this.style.display='none'">
+        </div>
+        <!-- ******************************** -->
+
+        <div class="container mx-auto px-6 py-20 text-center text-white relative z-10">
+            <!-- H1 Optimizado para SEO en Cartagena -->
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight shadow-text animate-fade-in-up" style="transition-delay: 100ms;">
+                Soluciones de Ingeniería Eléctrica y Electromecánica en Cartagena
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 animate-fade-in-up" style="transition-delay: 300ms;">
+                Especialistas en proyectos industriales, comerciales y navales. Brindamos calidad, confiabilidad y costos competitivos en la Costa Caribe.
+            </p>
+            <a href="#servicios" class="bg-orange-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 animate-fade-in-up animate-pulse-slow" style="transition-delay: 500ms;">
+                Explora Nuestros Servicios
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== Sección "Por qué Escogernos" / Empresa ========== -->
+    <section id="empresa" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-orange-500 font-semibold uppercase tracking-wider">Nuestra Garantía</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 animate-fade-in-up">
+                    Tu Aliado Confiable en Ingeniería en Cartagena
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4 animate-fade-in-up" style="transition-delay: 100ms;">
+                    Combinamos experiencia, tecnología y personal calificado para ejecutar tus proyectos con los más altos estándares de calidad y dentro de los plazos establecidos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Beneficio 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-slide-in-left">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-4xl">🏆</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Experiencia Comprobada</h3>
+                    <p class="text-gray-600">
+                        Vasta experiencia en proyectos de ingeniería eléctrica, electromecánica e instrumentación en el sector industrial de Cartagena.
+                    </p>
+                </div>
+                <!-- Beneficio 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-4xl">💻</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Tecnología y Calificación</h3>
+                    <p class="text-gray-600">
+                        Utilizamos tecnología de punta y contamos con mano de obra calificada para el diseño, programación y ejecución de proyectos.
+                    </p>
+                </div>
+                <!-- Beneficio 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-slide-in-right">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-4xl">⏱️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Costo Competitivo</h3>
+                    <p class="text-gray-600">
+                        Proyectos de ingeniería de alta confiabilidad a un costo competitivo, optimizando tu presupuesto sin sacrificar calidad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Servicios Section (Rediseñada) ========== -->
+    <section id="servicios" class="py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-orange-400 font-semibold uppercase tracking-wider">Nuestras Soluciones</span>
+                <!-- H2 Optimizado para SEO -->
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 animate-fade-in-up">
+                    Servicios de Ingeniería Especializada en Cartagena
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Tarjeta de Servicio 1 (Con efecto de borde) -->
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 100ms;">
+                    <!-- Efecto de Brillo (Glow Effect) -->
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
+                    <!-- Contenido de la Tarjeta -->
+                    <div class="relative z-10">
+                        <img src="https://placehold.co/600x400/0284C7/FFFFFF?text=Ingeniería+Eléctrica" alt="Proyectos de ingeniería eléctrica en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-bold mb-3">Ing. Eléctrica y Electromecánica</h3>
+                        <p class="text-gray-300 mb-4">
+                            Realizamos proyectos de ingeniería eléctrica y electromecánica para los sectores industrial, comercial y residencial.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de Servicio 2 (Con efecto de borde) -->
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 250ms;">
+                    <!-- Efecto de Brillo (Glow Effect) -->
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
+                    <!-- Contenido de la Tarjeta -->
+                    <div class="relative z-10">
+                        <img src="https://placehold.co/600x400/1D4ED8/FFFFFF?text=Instrumentación" alt="Calibración de equipos de instrumentación en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-bold mb-3">Instrumentación Industrial</h3>
+                        <p class="text-gray-300 mb-4">
+                            Expertos en calibración, mantenimiento y montaje de equipos de instrumentación industrial y control de procesos.
+                        </D>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Servicio 3 (Con efecto de borde) -->
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 400ms;">
+                    <!-- Efecto de Brillo (Glow Effect) -->
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
+                    <!-- Contenido de la Tarjeta -->
+                    <div class="relative z-10">
+                        <img src="https://placehold.co/600x400/047857/FFFFFF?text=Obras+Civiles" alt="Construcción de obras civiles en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-bold mb-3">Obras Civiles Menores</h3>
+                        <p class="text-gray-300 mb-4">
+                            Desarrollamos diseños y construcciones de obras civiles menores, complementando nuestros proyectos de ingeniería.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de Servicio 4 (Con efecto de borde) -->
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 550ms;">
+                    <!-- Efecto de Brillo (Glow Effect) -->
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
+                    <!-- Contenido de la Tarjeta -->
+                    <div class="relative z-10">
+                        <img src="https://placehold.co/600x400/115E59/FFFFFF?text=Naval" alt="Mantenimiento naval en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-2xl font-bold mb-3">Mantenimiento Naval</h3>
+                        <p class="text-gray-300 mb-4">
+                            Servicios de montaje, reparaciones y mantenimiento de embarcaciones navales en el puerto de Cartagena.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Proyectos Section ========== -->
+    <section id="proyectos" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold uppercase tracking-wider">Portafolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 animate-fade-in-up">
+                    Proyectos Destacados en Cartagena y la Región
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4 animate-fade-in-up" style="transition-delay: 100ms;">
+                    Hemos colaborado con clientes en los sectores industrial, comercial y residencial, entregando resultados de calidad.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="relative rounded-lg overflow-hidden shadow-lg group animate-slide-in-left" style="transition-delay: 200ms;">
+                    <img src="https://placehold.co/600x450/334155/FFFFFF?text=Proyecto+Industrial" alt="Proyecto industrial en Mamonal, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold">Sector Industrial</h3>
+                        <p class="text-blue-200">Planta en Mamonal</p>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="relative rounded-lg overflow-hidden shadow-lg group animate-fade-in-up" style="transition-delay: 350ms;">
+                    <img src="https://placehold.co/600x450/065F46/FFFFFF?text=Proyecto+Comercial" alt="Proyecto comercial en Bocagrande, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold">Sector Comercial</h3>
+                        <p class="text-blue-200">Instalaciones en Bocagrande</p>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="relative rounded-lg overflow-hidden shadow-lg group animate-slide-in-right" style="transition-delay: 500ms;">
+                    <img src="https://placehold.co/600x450/1E3A8A/FFFFFF?text=Proyecto+Naval" alt="Proyecto naval en Pasacaballos, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold">Sector Naval</h3>
+                        <p class="text-blue-200">Mantenimiento en Pasacaballos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Proyectos Recientes ========== -->
+    <section id="proyectos-recientes" class="py-24 bg-gray-50/70">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-orange-500 font-semibold uppercase tracking-wider">Nuestro Trabajo</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 animate-fade-in-up">
+                    Proyectos Recientes
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4 animate-fade-in-up" style="transition-delay: 100ms;">
+                    Mira nuestras más recientes implementaciones en Cartagena y la región caribe.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Proyecto Reciente 1 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up" style="transition-delay: 300ms;">
+                    <img src="images/reciente-1.jpg" alt="Proyecto reciente 1 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Proyecto+1'">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Nombre del Proyecto 1</h3>
+                        <p class="text-gray-600 mb-4">
+                            Breve descripción de los trabajos realizados en este proyecto.
+                        </p>
+                    </div>
+                </div>
+                <!-- Proyecto Reciente 2 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up" style="transition-delay: 450ms;">
+                    <img src="images/reciente-2.jpg" alt="Proyecto reciente 2 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Proyecto+2'">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Nombre del Proyecto 2</h3>
+                        <p class="text-gray-600 mb-4">
+                            Breve descripción de los trabajos realizados en este proyecto.
+                        </p>
+                    </div>
+                </div>
+                <!-- Proyecto Reciente 3 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up" style="transition-delay: 600ms;">
+                    <img src="images/reciente-3.jpg" alt="Proyecto reciente 3 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Proyecto+3'">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Nombre del Proyecto 3</h3>
+                        <p class="text-gray-600 mb-4">
+                            Breve descripción de los trabajos realizados en este proyecto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========== NUEVA SECCIÓN: Testimonios ========== -->
+    <section id="testimonios" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-orange-500 font-semibold uppercase tracking-wider">Lo que dicen de nosotros</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 animate-fade-in-up">
+                    Opiniones de Nuestros Clientes
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4 animate-fade-in-up" style="transition-delay: 100ms;">
+                    La confianza y satisfacción de nuestros clientes es nuestra máxima prioridad.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gray-50/70 p-8 rounded-lg shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fade-in-up" style="transition-delay: 300ms;">
+                    <div class="text-5xl text-blue-300 mb-4 leading-none">&ldquo;</div>
+                    <p class="text-gray-700 italic mb-6">
+                        "El equipo de Instalar Caribe demostró un profesionalismo excepcional. Cumplieron con todos los plazos y la calidad del trabajo eléctrico en nuestra nueva planta fue impecable."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Puedes reemplazar esto con una imagen de la persona -->
+                        <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xl mr-4">
+                            <span>JP</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Juan Pérez</h4>
+                            <p class="text-sm text-gray-600">Gerente de Operaciones, Industria XYZ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="bg-gray-50/70 p-8 rounded-lg shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fade-in-up" style="transition-delay: 450ms;">
+                    <div class="text-5xl text-blue-300 mb-4 leading-none">&ldquo;</div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Su servicio de instrumentación y calibración es de primera. La precisión que aportaron a nuestra línea de control de procesos ha optimizado nuestra producción."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xl mr-4">
+                            <span>MG</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">María González</h4>
+                            <p class="text-sm text-gray-600">Directora de Calidad, Sector Alimentos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="bg-gray-50/70 p-8 rounded-lg shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fade-in-up" style="transition-delay: 600ms;">
+                    <div class="text-5xl text-blue-300 mb-4 leading-none">&ldquo;</div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Respuesta rápida y efectiva para el mantenimiento naval que requeríamos. Han sido un aliado clave para mantener nuestra flota operativa en Cartagena."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xl mr-4">
+                            <span>CR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Carlos Rodríguez</h4>
+                            <p class="text-sm text-gray-600">Jefe de Flota, Logística Naval</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Clientes ========== -->
+    <section id="clientes" class="py-24 bg-white"> <!-- Cambiado de bg-white a bg-gray-50/70 para alternar -->
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold uppercase tracking-wider">Confianza</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 animate-fade-in-up">
+                    Nuestros Clientes Confían en Nosotros
+                </h2>
+            </div>
+            
+            <!-- Carrusel de Logos Infinito -->
+            <div class="logo-carousel-wrapper">
+                <div class="logo-carousel-track">
+                    <!-- Logos (Set 1) -->
+                    <div class="logo-slide"><img src="images/cliente-1.png" alt="Logo Cliente 1" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+1'"></div>
+                    <div class="logo-slide"><img src="images/cliente-2.png" alt="Logo Cliente 2" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+2'"></div>
+                    <div class="logo-slide"><img src="images/cliente-3.png" alt="Logo Cliente 3" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+3'"></div>
+                    <div class="logo-slide"><img src="images/cliente-4.png" alt="Logo Cliente 4" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+4'"></div>
+                    <div class="logo-slide"><img src="images/cliente-5.png" alt="Logo Cliente 5" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+5'"></div>
+                    
+                    <!-- Logos (Set 2 - Duplicado para efecto infinito) -->
+                    <div class="logo-slide"><img src="images/cliente-1.png" alt="Logo Cliente 1" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+1'"></div>
+                    <div class="logo-slide"><img src="images/cliente-2.png" alt="Logo Cliente 2" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+2'"></div>
+                    <div class="logo-slide"><img src="images/cliente-3.png" alt="Logo Cliente 3" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+3'"></div>
+                    <div class="logo-slide"><img src="images/cliente-4.png" alt="Logo Cliente 4" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+4'"></div>
+                    <div class="logo-slide"><img src="images/cliente-5.png" alt="Logo Cliente 5" onerror="this.src='https://placehold.co/200x80/9CA3AF/FFFFFF?text=Cliente+5'"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Contacto Section ========== -->
+    <section id="contacto" class="py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <span class="text-orange-400 font-semibold uppercase tracking-wider">¿Listo para Empezar?</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                    Contacta con Nuestros Ingenieros en Cartagena
+                </h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mt-4">
+                    Cotiza tu proyecto con nosotros. Estamos listos para brindarte la mejor solución de ingeniería.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Formulario de Contacto -->
+                <form id="contact-form" class="bg-gray-800 p-8 rounded-lg shadow-2xl animate-slide-in-left" style="transition-delay: 200ms;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Describe tu Proyecto</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+
+                    <!-- ELIMINADO: Botón de Gemini API -->
+                    
+                    <button type="submit" class="w-full bg-orange-500 text-white font-bold text-lg px-8 py-4 rounded-md hover:bg-orange-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+                        Enviar Solicitud
+                    </button>
+                    <!-- CAMBIO: Checkbox de aceptación reemplazado por texto -->
+                    <div class="mt-6 text-center">
+                        <p class="text-xs text-gray-400">
+                            Al hacer clic en "Enviar Solicitud", aceptas nuestra 
+                            <a href="politica-privacidad.html" target="_blank" class="text-blue-400 underline hover:text-blue-300">Política de Privacidad</a> y 
+                            <a href="tratamiento-datos.html" target="_blank" class="text-blue-400 underline hover:text-blue-300">Política de Tratamiento de Datos</a>.
+                        </p>
+                    </div>
+                    <p id="form-status" class="text-center mt-4"></p>
+                </form>
+                
+                <!-- Información de Contacto -->
+                <div class="space-y-8 animate-slide-in-right" style="transition-delay: 350ms;">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                            <span class="text-4xl">📍</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold">Ubicación</h3>
+                            <p class="text-gray-300">Pasacaballos, Bolívar</p>
+                            <p class="text-gray-400">Dg # 23-09</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                            <span class="text-4xl">📞</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold">Llámanos</h3>
+                            <p class="text-gray-300">+57 304 266 8503</p>
+                            <p class="text-gray-300">+57 301 582 4894</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                            <span class="text-4xl">✉️</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold">Escríbenos</h3>
+                            <!-- CAMBIO: Añadido enlace mailto: -->
+                            <p>
+                                <a href="mailto:proyectos@instalarcaribe.com" class="text-gray-300 hover:text-blue-400 transition-colors">
+                                    proyectos@instalarcaribe.com
+                                </a>
+                            </p>
+                            <p class="text-gray-400">Respondemos en 24 horas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <!-- NUEVO FOOTER COMPACTO -->
+    <footer class="bg-gray-950 text-gray-400 pt-12 pb-8 text-sm"> <!-- Padding reducido, texto más pequeño -->
+        <div class="container mx-auto px-6">
+            
+            <!-- NUEVO: Wrapper para limitar el ancho en PC -->
+            <div class="max-w-screen-lg mx-auto">
+                <!-- Top section: Logo & Nav -->
+                <!-- CAMBIO: Forzado a flex-col en todos los tamaños para centrar como en móvil -->
+                <div class="flex flex-col justify-center items-center gap-6 mb-8">
+                    <!-- Logo -->
+                    <div class="mb-4 md:mb-0">
+                        <a href="#inicio" class="text-xl font-bold text-white hover:text-blue-400 transition-colors">
+                
+                <!-- Navegación Links (horizontal) -->
+                <nav class="flex flex-wrap justify-center md:justify-end gap-x-5 gap-y-2">
+                    <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+                    <a href="#empresa" class="hover:text-white transition-colors">Empresa</a>
+                    <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
+                    <a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a>
+                    <a href="#testimonios" class="hover:text-white transition-colors">Testimonios</a>
+                    <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+                </nav>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 mb-8"></div>
+
+            <!-- Bottom section: Copyright, Legal, Social -->
+            <!-- CAMBIO: Forzado a flex-col en todos los tamaños para centrar como en móvil -->
+            <div class="flex flex-col justify-center items-center text-center gap-6">
+                
+                <!-- Copyright & Legal -->
+                <div class="mt-4 sm:mt-0 space-y-1">
+                    <p>&copy; <span id="current-year"></span> Instalar Caribe. Todos los derechos reservados.</p>
+                    <p class="text-gray-500 text-xs">
+                        <a href="politica-privacidad.html" target="_blank" class="hover:text-white mx-1 transition-colors">Política de Privacidad</a>
+                        <span>|</span>
+                        <a href="tratamiento-datos.html" target="_blank" class="hover:text-white mx-1 transition-colors">Tratamiento de Datos</a>
+                        <span class="hidden md:inline">|</span>
+                        <span class="block md:inline mt-1 md:mt-0">Diseño por <a href="https://tech.frankmercado.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-white transition-colors">FMTech</a></span>
+                    </p>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="https://web.facebook.com/instalarcaribesasc" target="_blank" rel="noopener noreferrer" class="transform hover:scale-125 transition-transform duration-300">
+                        <img src="images/logo-facebook.png" alt="Facebook Instalar Caribe" class="h-7 w-auto" onerror="this.style.display='none'"> <!-- CAMBIO: Arreglada deformación -->
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="transform hover:scale-125 transition-transform duration-300">
+                        <img src="images/instagram-logo.png" alt="Instagram Instalar Caribe" class="h-7 w-auto" onerror="this.style.display='none'"> <!-- CAMBIO: Arreglada deformación -->
+                    </a>
+                </div>
+
+            </div>
+
+                </div>
+            </div> <!-- FIN: Wrapper -->
+
+        </div>
+    </footer>
+    <!-- FIN NUEVO FOOTER COMPACTO -->
+
+    <!-- Botón Flotante de WhatsApp (Simple) -->
+    <a href="https://wa.me/573042668503?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios%20de%20ingenier%C3%ADa." 
+       class="whatsapp-float-simple" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <img src="images/whatsapp-logo.png" alt="Contactar por WhatsApp" onerror="this.style.display='none'">
+        <span>Contáctanos</span>
+    </a>
+
+    <!-- ========== JavaScript ========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            
+            // --- Script para el Menú Móvil ---
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Cierra el menú móvil al hacer clic en un enlace
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Script para Animación en Scroll (Intersection Observer) ---
+            const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right');
+
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Dejar de observar una vez que es visible
+                        }
+                    });
+                }, {
+                    threshold: 0.1 // Activar cuando el 10% del elemento es visible
+                });
+
+                animatedElements.forEach(el => {
+                    observer.observe(el);
+                });
+            } else {
+                // Fallback para navegadores antiguos: simplemente muestra todo
+                animatedElements.forEach(el => {
+                    el.classList.add('is-visible');
+                });
+            }
+            
+            // --- Script para el Año Actual en el Footer ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // --- Script simple de manejo de formulario ---
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            // ELIMINADO: const acceptPolicies
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Previene el envío real
+                
+                // ELIMINADO: Validación del Checkbox
+
+                // Simulación de envío
+                formStatus.textContent = 'Enviando mensaje...';
+                formStatus.style.color = '#F97316'; // text-orange-500
+
+                setTimeout(() => {
+                    // Simulación de éxito
+                    formStatus.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+                    formStatus.style.color = '#4ADE80'; // text-green-400
+                    contactForm.reset(); // Limpia el formulario
+                }, 2000);
+            });
+
+            // --- ELIMINADO: Lógica de la API de Gemini ---
+
+        });
+    </script>
+
+</body>
+</html>
