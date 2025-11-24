@@ -152,6 +152,27 @@
             }
         }
 
+        /* Particles Canvas */
+        #hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Behind text but above background */
+            pointer-events: none;
+        }
+
+        /* 3D Tilt Effect for Cards */
+        .card-3d {
+            transition: transform 0.1s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d:hover {
+            transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(1.02);
+        }
+
     </style>
 </head>
 <body class="bg-white text-gray-700">
@@ -200,9 +221,10 @@
     <!-- ========== Hero Section ========== -->
     <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Fondo de Gradiente -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-700 to-blue-900"></div>
-        <!-- Efecto de partículas sutil (CSS) -->
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FFF 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-black"></div>
+        
+        <!-- Canvas de Partículas -->
+        <canvas id="hero-particles" class="absolute inset-0"></canvas>
 
         <!-- ***** NUEVO: Logo de fondo ***** -->
         <div class="absolute inset-0 z-5 flex items-center justify-center p-8 pointer-events-none">
@@ -213,7 +235,8 @@
         </div>
         <!-- ******************************** -->
 
-        <div class="container mx-auto px-6 py-20 text-center text-white relative z-10">
+        <div class="container mx-auto px-6 py-20 text-center text-white relative z-10 pointer-events-none">
+            <div class="pointer-events-auto"> <!-- Wrapper to re-enable clicks -->
             <!-- H1 Optimizado para SEO en Cartagena -->
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight shadow-text animate-fade-in-up" style="transition-delay: 100ms;">
                 Soluciones de Ingeniería Eléctrica y Electromecánica en Cartagena
@@ -224,6 +247,7 @@
             <a href="#servicios" class="bg-orange-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 animate-fade-in-up animate-pulse-slow" style="transition-delay: 500ms;">
                 Explora Nuestros Servicios
             </a>
+            </div>
         </div>
     </section>
 
@@ -289,12 +313,12 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Tarjeta de Servicio 1 (Con efecto de borde) -->
-                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 100ms;">
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up card-3d" style="transition-delay: 100ms;">
                     <!-- Efecto de Brillo (Glow Effect) -->
                     <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
                     <!-- Contenido de la Tarjeta -->
                     <div class="relative z-10">
-                        <img src="https://placehold.co/600x400/0284C7/FFFFFF?text=Ingeniería+Eléctrica" alt="Proyectos de ingeniería eléctrica en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" alt="Proyectos de ingeniería eléctrica en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
                         <h3 class="text-2xl font-bold mb-3">Ing. Eléctrica y Electromecánica</h3>
                         <p class="text-gray-300 mb-4">
                             Realizamos proyectos de ingeniería eléctrica y electromecánica para los sectores industrial, comercial y residencial.
@@ -303,26 +327,26 @@
                 </div>
                 
                 <!-- Tarjeta de Servicio 2 (Con efecto de borde) -->
-                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 250ms;">
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up card-3d" style="transition-delay: 250ms;">
                     <!-- Efecto de Brillo (Glow Effect) -->
                     <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
                     <!-- Contenido de la Tarjeta -->
                     <div class="relative z-10">
-                        <img src="https://placehold.co/600x400/1D4ED8/FFFFFF?text=Instrumentación" alt="Calibración de equipos de instrumentación en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=600&auto=format&fit=crop" alt="Calibración de equipos de instrumentación en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
                         <h3 class="text-2xl font-bold mb-3">Instrumentación Industrial</h3>
                         <p class="text-gray-300 mb-4">
                             Expertos en calibración, mantenimiento y montaje de equipos de instrumentación industrial y control de procesos.
-                        </D>
+                        </p>
                     </div>
                 </div>
 
                 <!-- Tarjeta de Servicio 3 (Con efecto de borde) -->
-                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 400ms;">
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up card-3d" style="transition-delay: 400ms;">
                     <!-- Efecto de Brillo (Glow Effect) -->
                     <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
                     <!-- Contenido de la Tarjeta -->
                     <div class="relative z-10">
-                        <img src="https://placehold.co/600x400/047857/FFFFFF?text=Obras+Civiles" alt="Construcción de obras civiles en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop" alt="Construcción de obras civiles en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
                         <h3 class="text-2xl font-bold mb-3">Obras Civiles Menores</h3>
                         <p class="text-gray-300 mb-4">
                             Desarrollamos diseños y construcciones de obras civiles menores, complementando nuestros proyectos de ingeniería.
@@ -331,12 +355,12 @@
                 </div>
                 
                 <!-- Tarjeta de Servicio 4 (Con efecto de borde) -->
-                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="transition-delay: 550ms;">
+                <div class="relative group p-6 bg-gray-800 rounded-lg shadow-lg transform transition-all duration-300 hover:-translate-y-2 animate-fade-in-up card-3d" style="transition-delay: 550ms;">
                     <!-- Efecto de Brillo (Glow Effect) -->
                     <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg blur-lg opacity-0 group-hover:opacity-75 transition duration-300"></div>
                     <!-- Contenido de la Tarjeta -->
                     <div class="relative z-10">
-                        <img src="https://placehold.co/600x400/115E59/FFFFFF?text=Naval" alt="Mantenimiento naval en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
+                        <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=600&auto=format&fit=crop" alt="Mantenimiento naval en Cartagena" class="w-full h-48 object-cover rounded-md mb-4">
                         <h3 class="text-2xl font-bold mb-3">Mantenimiento Naval</h3>
                         <p class="text-gray-300 mb-4">
                             Servicios de montaje, reparaciones y mantenimiento de embarcaciones navales en el puerto de Cartagena.
@@ -363,7 +387,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Proyecto 1 -->
                 <div class="relative rounded-lg overflow-hidden shadow-lg group animate-slide-in-left" style="transition-delay: 200ms;">
-                    <img src="https://placehold.co/600x450/334155/FFFFFF?text=Proyecto+Industrial" alt="Proyecto industrial en Mamonal, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=600&auto=format&fit=crop" alt="Proyecto industrial en Mamonal, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-white text-2xl font-bold">Sector Industrial</h3>
@@ -372,7 +396,7 @@
                 </div>
                 <!-- Proyecto 2 -->
                 <div class="relative rounded-lg overflow-hidden shadow-lg group animate-fade-in-up" style="transition-delay: 350ms;">
-                    <img src="https://placehold.co/600x450/065F46/FFFFFF?text=Proyecto+Comercial" alt="Proyecto comercial en Bocagrande, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop" alt="Proyecto comercial en Bocagrande, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-white text-2xl font-bold">Sector Comercial</h3>
@@ -381,7 +405,7 @@
                 </div>
                 <!-- Proyecto 3 -->
                 <div class="relative rounded-lg overflow-hidden shadow-lg group animate-slide-in-right" style="transition-delay: 500ms;">
-                    <img src="https://placehold.co/600x450/1E3A8A/FFFFFF?text=Proyecto+Naval" alt="Proyecto naval en Pasacaballos, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=600&auto=format&fit=crop" alt="Proyecto naval en Pasacaballos, Cartagena" class="w-full h-full object-cover transform transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-white text-2xl font-bold">Sector Naval</h3>
@@ -408,7 +432,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Proyecto Reciente 1 -->
                 <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up" style="transition-delay: 300ms;">
-                    <img src="images/reciente-1.jpg" alt="Proyecto reciente 1 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Proyecto+1'">
+                    <img src="images/reciente-1.jpg" alt="Proyecto reciente 1 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop'">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">Nombre del Proyecto 1</h3>
                         <p class="text-gray-600 mb-4">
@@ -418,7 +442,7 @@
                 </div>
                 <!-- Proyecto Reciente 2 -->
                 <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up" style="transition-delay: 450ms;">
-                    <img src="images/reciente-2.jpg" alt="Proyecto reciente 2 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Proyecto+2'">
+                    <img src="images/reciente-2.jpg" alt="Proyecto reciente 2 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600&auto=format&fit=crop'">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">Nombre del Proyecto 2</h3>
                         <p class="text-gray-600 mb-4">
@@ -428,7 +452,7 @@
                 </div>
                 <!-- Proyecto Reciente 3 -->
                 <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up" style="transition-delay: 600ms;">
-                    <img src="images/reciente-3.jpg" alt="Proyecto reciente 3 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Proyecto+3'">
+                    <img src="images/reciente-3.jpg" alt="Proyecto reciente 3 Instalar Caribe" class="w-full h-64 object-cover" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop'">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">Nombre del Proyecto 3</h3>
                         <p class="text-gray-600 mb-4">
@@ -707,78 +731,7 @@
     </a>
 
     <!-- ========== JavaScript ========== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            
-            // --- Script para el Menú Móvil ---
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Cierra el menú móvil al hacer clic en un enlace
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-
-            // --- Script para Animación en Scroll (Intersection Observer) ---
-            const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right');
-
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target); // Dejar de observar una vez que es visible
-                        }
-                    });
-                }, {
-                    threshold: 0.1 // Activar cuando el 10% del elemento es visible
-                });
-
-                animatedElements.forEach(el => {
-                    observer.observe(el);
-                });
-            } else {
-                // Fallback para navegadores antiguos: simplemente muestra todo
-                animatedElements.forEach(el => {
-                    el.classList.add('is-visible');
-                });
-            }
-            
-            // --- Script para el Año Actual en el Footer ---
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // --- Script simple de manejo de formulario ---
-            const contactForm = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
-            // ELIMINADO: const acceptPolicies
-
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault(); // Previene el envío real
-                
-                // ELIMINADO: Validación del Checkbox
-
-                // Simulación de envío
-                formStatus.textContent = 'Enviando mensaje...';
-                formStatus.style.color = '#F97316'; // text-orange-500
-
-                setTimeout(() => {
-                    // Simulación de éxito
-                    formStatus.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
-                    formStatus.style.color = '#4ADE80'; // text-green-400
-                    contactForm.reset(); // Limpia el formulario
-                }, 2000);
-            });
-
-            // --- ELIMINADO: Lógica de la API de Gemini ---
-
-        });
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
